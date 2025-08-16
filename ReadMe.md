@@ -10,7 +10,7 @@ AuctionHub is a real-time auction platform built with a modern full-stack archit
 The client-side is built with React Vite, utilizing a component-based architecture with shadcn/ui for the design system. The application uses Wouter for lightweight client-side routing and TanStack Query for server state management and caching. The frontend implements real-time features through WebSocket connections for live auction updates and bidding.
 
 **Key Design Decisions:**
-- **React with TypeScript**: Provides type safety and better developer experience
+- **React with Vite**: Provides better developer experience
 - **shadcn/ui Components**: Offers a consistent, accessible design system built on Radix UI primitives
 - **Wouter Router**: Lightweight alternative to React Router with similar API but smaller bundle size
 - **TanStack Query**: Handles server state synchronization, caching, and background updates
@@ -21,18 +21,18 @@ The client-side is built with React Vite, utilizing a component-based architectu
 The server uses Express.js with Javascript. It implements a RESTful API design with WebSocket support for real-time features. The architecture follows a service-oriented pattern with separate services for auctions, emails, invoices, and Redis operations.
 
 **Key Design Decisions:**
-- **Express.js with Javascript**: Familiar framework with type safety
+- **Express.js with Javascript**: Familiar framework with  safety
 - **Service Layer Pattern**: Separates business logic into dedicated service classes (AuctionService, EmailService, InvoiceService)
 - **WebSocket Integration**: Real-time bidding and auction state updates
 - **Middleware-based Authentication**: JWT-based authentication with role-based access control
 
 ## Database and Storage
 
-The application uses PostgreSQL as the primary database with Drizzle ORM for type-safe database operations. The schema supports multi-table relationships for users, auctions, bids, notifications, counter-offers, and invoices.
+The application uses PostgreSQL as the primary database with Drizzle ORM for safe database operations. The schema supports multi-table relationships for users, auctions, bids, notifications, counter-offers, and invoices.
 
 **Key Design Decisions:**
 - **PostgreSQL with Neon**: Serverless PostgreSQL for scalability and ease of deployment
-- **Drizzle ORM**: Type-safe SQL operations with excellent TypeScript integration
+- **Drizzle ORM**: safe SQL operations with excellent JavaScript integration
 - **Database Schema**: Comprehensive schema with proper relationships and constraints using enums for status fields
 - **Redis for Caching**: Handles real-time auction state, distributed locking, and session management
 
